@@ -1,5 +1,5 @@
-<%= form_with url: dashboard_resources_path, method: :get, class: "row g-4 pb-4 position-relative" do |f| %>
-  <div class="row mb-3 justify-content-between w-75">
+<%= form_with url: dashboard_resources_path, method: :get, class: "row g-4 pb-5 position-relative" do |f| %>
+  <div class="row mt-3 mb-3 justify-content-between w-75">
     <div class="col-auto" data-controller="select2">
       <%= f.label :project_id,  t("project.form.name"), class: "form-label" %>
       <%= f.select :project_id, list_project, {include_blank: true, selected: params[:project_id]}, {class: "form-select select2"} %>
