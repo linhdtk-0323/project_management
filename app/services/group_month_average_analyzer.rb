@@ -46,7 +46,7 @@ class GroupMonthAverageAnalyzer < Patterns::Service
       average_prs[pr_id] * grs
     end.sum.round(Settings.digits.length_2)
     {members:, added_value: added_value.to_f,
-     diff: (added_value - members).round(Settings.digits.length_2)}
+     diff: (added_value - members).round(Settings.digits.length_2).to_f}
   end
 
   # calculator group value, resource total months
