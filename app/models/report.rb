@@ -15,9 +15,9 @@ class Report < ApplicationRecord
   validates :description, presence: true,
             length: {maximum: Settings.project.max_length_1000}
   validates :resource_description, presence: true,
-            length: {maximum: Settings.project.max_length_200}
+            length: {maximum: Settings.project.max_length_1000}
   validates :issue, presence: true,
-            length: {maximum: Settings.project.max_length_200}
+            length: {maximum: Settings.project.max_length_1000}
 
   scope :filter_name_status, lambda {|name, status|
     ids = Project.filter_name(name)
