@@ -16,7 +16,7 @@ class ReleasePlan < ApplicationRecord
 
   validates :release_date, presence: true
   validates :description, presence: true,
-            length: {maximum: Settings.project.max_length_200}
+            length: {maximum: Settings.project.max_length_1000}
   validates :is_released, presence: true
   validate :check_is_released
 
